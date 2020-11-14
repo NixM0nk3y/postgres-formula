@@ -17,6 +17,7 @@
     {% set version = repo.version %}
     {% set fromrepo = repo.fromrepo|default(name ~ '-pgdg', true) %}
   {% else %}
+    {% set version = repo.version %}
     {% set fromrepo = name %}
   {% endif %}
   {% set cluster_name = repo.cluster_name %}
