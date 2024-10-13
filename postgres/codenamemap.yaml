@@ -30,7 +30,7 @@
   data_dir: {{ data_dir }}
   fromrepo: {{ fromrepo }}
   pkg_repo:
-    name: 'deb http://apt.postgresql.org/pub/repos/apt {{ name }}-pgdg main'
+    name: 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.gpg] http://apt.postgresql.org/pub/repos/apt {{ name }}-pgdg main'
   pkg: postgresql-{{ version }}
   pkg_client: postgresql-client-{{ version }}
   prepare_cluster:
@@ -61,12 +61,16 @@
 {{ debian_codename('jessie', '9.4') }}
 {{ debian_codename('stretch', '9.6') }}
 {{ debian_codename('buster', '11') }}
+{{ debian_codename('bullseye', '13') }}
+{{ debian_codename('bookworm', '15') }}
 
 # `oscodename` grain has long distro name
 # if `lsb-release` package not installed
 {{ debian_codename('jessie', '9.4', 'Debian GNU/Linux 8 (jessie)') }}
 {{ debian_codename('stretch', '9.6', 'Debian GNU/Linux 9 (stretch)') }}
 {{ debian_codename('buster', '11', 'Debian GNU/Linux 10 (buster)') }}
+{{ debian_codename('bullseye', '13', 'Debian GNU/Linux 11 (bullseye)') }}
+{{ debian_codename('bookworm', '15', 'Debian GNU/Linux 12 (bookworm)') }}
 
 ## Ubuntu
 # http://apt.postgresql.org/pub/repos/apt/dists/
@@ -75,12 +79,20 @@
 {{ debian_codename('bionic', '10') }}
 {{ debian_codename('eoan', '11') }}
 {{ debian_codename('focal', '12') }}
+{{ debian_codename('jammy', '14') }}
 
 ## Fedora
-# http://apt.postgresql.org/pub/repos/yum/reporpms/
+# https://download.postgresql.org/pub/repos/yum/13/fedora/
 # https://apps.fedoraproject.org/packages/postgresql
-# `oscodename` grain has long distro name
-{{ fedora_codename('Fedora-31', '11', 'Fedora 31 (Thirty One)') }}
-{{ fedora_codename('Fedora-30', '11', 'Fedora 30 (Thirty)') }}
+{{ fedora_codename('Fedora-34', '13') }}
+{{ fedora_codename('Fedora-33', '13') }}
+
+## Amazon
+Amazon Linux 2:
+  pkgs_deps:
+    - libicu
+    - systemd-sysv
+  pkg_repo:
+    baseurl: 'https://download.postgresql.org/pub/repos/yum/{{ repo.version }}/redhat/rhel-7-$basearch'
 
 # vim: ft=sls

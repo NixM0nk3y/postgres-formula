@@ -1,5 +1,3 @@
-.. _readme:
-
 postgres-formula
 ================
 
@@ -63,7 +61,7 @@ Creates such DB objects as: users, tablespaces, databases, schemas and extension
 See ``pillar.example`` file for details.
 
 ``postgres.python``
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 Installs the PostgreSQL adapter for Python on Linux.
 
@@ -119,17 +117,17 @@ Removal states
 Meta state to remove Postgres software. By default the release installed by formula is targeted only. To target multiple releases, set pillar ``postgres.remove.multiple_releases: True``.
 
 ``postgres.server.remove``
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Remove server, lib, and contrib packages. The ``postgres.server.remove`` will retain data by default (no data loss) - set pillar ``postgres.remove.data: True`` to remove data and configuration directories also.
 
 ``postgres.client.remove``
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Remove client package.
 
 ``postgres.dev.remove``
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Remove development and python packages.
 
@@ -150,7 +148,7 @@ Creates the docker instance and runs the ``postgres`` main state, ready for test
 Runs the ``inspec`` tests on the actual instance.
 
 ``kitchen destroy``
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 Removes the docker instance.
 
@@ -163,5 +161,67 @@ Runs all of the stages above in one go: i.e. ``destroy`` + ``converge`` + ``veri
 ^^^^^^^^^^^^^^^^^
 
 Gives you SSH access to the instance for manual testing.
+
+Testing with Vagrant
+--------------------
+
+Windows/FreeBSD/OpenBSD testing is done with ``kitchen-salt``.
+
+Requirements
+^^^^^^^^^^^^
+
+* Ruby
+* Virtualbox
+* Vagrant
+
+Setup
+^^^^^
+
+.. code-block:: bash
+
+   $ gem install bundler
+   $ bundle install --with=vagrant
+   $ bin/kitchen test [platform]
+
+Where ``[platform]`` is the platform name defined in ``kitchen.vagrant.yml``,
+e.g. ``windows-81-latest-py3``.
+
+Note
+^^^^
+
+When testing using Vagrant you must set the environment variable ``KITCHEN_LOCAL_YAML`` to ``kitchen.vagrant.yml``.  For example:
+
+.. code-block:: bash
+
+   $ KITCHEN_LOCAL_YAML=kitchen.vagrant.yml bin/kitchen test      # Alternatively,
+   $ export KITCHEN_LOCAL_YAML=kitchen.vagrant.yml
+   $ bin/kitchen test
+
+Then run the following commands as needed.
+
+``bin/kitchen converge``
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Creates the Vagrant instance and runs the ``postgres`` main state, ready for testing.
+
+``bin/kitchen verify``
+^^^^^^^^^^^^^^^^^^^^^^
+
+Runs the ``inspec`` tests on the actual instance.
+
+``bin/kitchen destroy``
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Removes the Vagrant instance.
+
+``bin/kitchen test``
+^^^^^^^^^^^^^^^^^^^^
+
+Runs all of the stages above in one go: i.e. ``destroy`` + ``converge`` + ``verify`` + ``destroy``.
+
+``bin/kitchen login``
+^^^^^^^^^^^^^^^^^^^^^
+
+Gives you RDP/SSH access to the instance for manual testing.
 
 .. vim: fenc=utf-8 spell spl=en cc=100 tw=99 fo=want sts=2 sw=2 et

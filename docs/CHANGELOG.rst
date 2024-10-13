@@ -2,6 +2,205 @@
 Changelog
 =========
 
+`0.44.0 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.43.0...v0.44.0>`_ (2022-02-07)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **opensuse:** fix repo key parameter (\ `7bba14a <https://github.com/saltstack-formulas/postgres-formula/commit/7bba14a61cc0dce496ecda075726bf93c4c8812d>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **freebsd:** update with latest pre-salted Vagrant boxes [skip ci] (\ `2f7d009 <https://github.com/saltstack-formulas/postgres-formula/commit/2f7d009bb6fbebde68fdb5057ad7d17d9aaf4fe0>`_\ )
+* **gemfile:** allow rubygems proxy to be provided as an env var [skip ci] (\ `137eec7 <https://github.com/saltstack-formulas/postgres-formula/commit/137eec779073d865f2be667e1c852e64503e1730>`_\ )
+* **gemfile+lock:** use ``ssf`` customised ``inspec`` repo [skip ci] (\ `c13fa62 <https://github.com/saltstack-formulas/postgres-formula/commit/c13fa62f93ee0a39b0d1e1c4c6a1e343f077ae32>`_\ )
+* **kitchen+ci:** update with ``3004`` pre-salted images/boxes [skip ci] (\ `8947cc4 <https://github.com/saltstack-formulas/postgres-formula/commit/8947cc48707ff2a8a05b6deb7c4069200ee3e6af>`_\ )
+* **kitchen+ci:** update with latest ``3003.2`` pre-salted images [skip ci] (\ `33e590e <https://github.com/saltstack-formulas/postgres-formula/commit/33e590eccbd68083c4fd5e765e760e9036744fad>`_\ )
+* **kitchen+ci:** update with latest CVE pre-salted images [skip ci] (\ `9248de3 <https://github.com/saltstack-formulas/postgres-formula/commit/9248de33b125354dc676895f0b5a7e3ce0a6a27b>`_\ )
+* **kitchen+gitlab:** update for new pre-salted images [skip ci] (\ `ebe3841 <https://github.com/saltstack-formulas/postgres-formula/commit/ebe3841df8d69fa0036a99f99cfc92287c457f0c>`_\ )
+* **vagrant:** replace FreeBSD 12.2 with 12.3 [skip ci] (\ `71556cc <https://github.com/saltstack-formulas/postgres-formula/commit/71556cc1c01d98885c19088550c0f887f8a3273f>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **debian:** use repository keyring instead of key_id (\ `b6a28fe <https://github.com/saltstack-formulas/postgres-formula/commit/b6a28fee0d0baee8c21aa66919d35d6e8ecd57f3>`_\ )
+
+Tests
+^^^^^
+
+
+* **repository:** redhat's family alternatives for repo url (\ `43b4329 <https://github.com/saltstack-formulas/postgres-formula/commit/43b4329a51fa3aeacc96cb2c489b09feb9b1f632>`_\ )
+
+`0.43.0 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.42.0...v0.43.0>`_ (2021-07-20)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **redhat:** fix ``pkg_deps`` to be able to install PostgreSQL 13 (\ `060c8df <https://github.com/saltstack-formulas/postgres-formula/commit/060c8df630ea4077a3d5a2b301fed56ed6ce1a45>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* add Debian 11 Bullseye & update ``yamllint`` configuration [skip ci] (\ `1fa7c66 <https://github.com/saltstack-formulas/postgres-formula/commit/1fa7c66b8361357fc5372552ec713fd2dca15883>`_\ )
+* use ``default`` & ``repo`` InSpec suites (\ `a6c8197 <https://github.com/saltstack-formulas/postgres-formula/commit/a6c81972a2c722d1dc3637acb412a8e1e513c998>`_\ )
+* **kitchen:** move ``provisioner`` block & update ``run_command`` [skip ci] (\ `e9da40b <https://github.com/saltstack-formulas/postgres-formula/commit/e9da40b5707d1e3d7f55f0b526e89c917418d4f5>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **codenamemap:** update to current supported Fedora versions (\ `8a11bd6 <https://github.com/saltstack-formulas/postgres-formula/commit/8a11bd679a8a6175c796294dd0a5c759725de25d>`_\ )
+
+Tests
+^^^^^
+
+
+* **inspec:** move common controls to the ``share`` profile (\ `2214096 <https://github.com/saltstack-formulas/postgres-formula/commit/221409636290444aa06ef9e59fd324b94412a635>`_\ )
+* **inspec:** rename all files to avoid unnecessary ``_spec`` suffix (\ `a1837c2 <https://github.com/saltstack-formulas/postgres-formula/commit/a1837c24f1b5210964e74f576805470f6db1a0cf>`_\ )
+* **pillar:** use separate pillars to test ``default`` & ``repo`` suites (\ `27473b9 <https://github.com/saltstack-formulas/postgres-formula/commit/27473b9865e8d716aa991cd33e9e186815933483>`_\ )
+
+`0.42.0 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.9...v0.42.0>`_ (2021-07-15)
+-------------------------------------------------------------------------------------------------------------
+
+Features
+^^^^^^^^
+
+
+* **debian:** add bullseye support (\ `216192d <https://github.com/saltstack-formulas/postgres-formula/commit/216192dece7d275e189666c55d76456fbdde1b57>`_\ )
+
+`0.41.9 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.8...v0.41.9>`_ (2021-07-06)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **osmap.yaml:** fix PGDG repo file creation for Amazon Linux (\ `2de775b <https://github.com/saltstack-formulas/postgres-formula/commit/2de775be1e3e77b2bd71cb0a0a6fa587498c10e7>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **3003.1:** update inc. AlmaLinux, Rocky & ``rst-lint`` [skip ci] (\ `d16e91c <https://github.com/saltstack-formulas/postgres-formula/commit/d16e91ceb03411f58c98cbb919f65b3f3eb4abbb>`_\ )
+* **kitchen+gitlab:** remove Ubuntu 16.04 & Fedora 32 (EOL) [skip ci] (\ `b690bab <https://github.com/saltstack-formulas/postgres-formula/commit/b690bab978901f9bea7c9b043ebce5a8f520f4b9>`_\ )
+
+`0.41.8 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.7...v0.41.8>`_ (2021-05-25)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **jinja:** use json filter (\ `eb63ec8 <https://github.com/saltstack-formulas/postgres-formula/commit/eb63ec85e0f2d15f929ffbf1d483211b7bf4e595>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* add ``arch-master`` to matrix and update ``.travis.yml`` [skip ci] (\ `79feefa <https://github.com/saltstack-formulas/postgres-formula/commit/79feefa7519a5674496b8abfdc68e7baad75f950>`_\ )
+* **kitchen+gitlab:** adjust matrix to add ``3003`` [skip ci] (\ `fd8f0e5 <https://github.com/saltstack-formulas/postgres-formula/commit/fd8f0e5db5c67f21c16910ab3ed696d59a7eeee2>`_\ )
+* **vagrant:** add FreeBSD 13.0 [skip ci] (\ `93bb123 <https://github.com/saltstack-formulas/postgres-formula/commit/93bb123ea1a8e5037c8898777ba90338979e802f>`_\ )
+* **vagrant:** use pre-salted boxes & conditional local settings [skip ci] (\ `69812c1 <https://github.com/saltstack-formulas/postgres-formula/commit/69812c1f62b90ba9094c873930ac334edac9a0aa>`_\ )
+
+Documentation
+^^^^^^^^^^^^^
+
+
+* **readme:** fix headings [skip ci] (\ `c97317c <https://github.com/saltstack-formulas/postgres-formula/commit/c97317c39fe46375a78b478c08210d25461548ff>`_\ )
+
+`0.41.7 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.6...v0.41.7>`_ (2021-03-26)
+-------------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* enable Vagrant-based testing using GitHub Actions (\ `2ebc9c1 <https://github.com/saltstack-formulas/postgres-formula/commit/2ebc9c11da512c8bc2089e8ecb28f5d3e13261f1>`_\ )
+* **kitchen+ci:** use latest pre-salted images (after CVE) [skip ci] (\ `cc43d1c <https://github.com/saltstack-formulas/postgres-formula/commit/cc43d1c90db36c232012bc80b66baa248ece3c42>`_\ )
+
+Documentation
+^^^^^^^^^^^^^
+
+
+* **readme:** add ``Testing with Vagrant`` section (\ `ed2d688 <https://github.com/saltstack-formulas/postgres-formula/commit/ed2d6884b10725fad55b83de4972e59710f1970f>`_\ )
+
+Tests
+^^^^^
+
+
+* standardise use of ``share`` suite & ``_mapdata`` state [skip ci] (\ `fc53d97 <https://github.com/saltstack-formulas/postgres-formula/commit/fc53d977b32290834dc5aa17fe461154b269d38c>`_\ )
+
+`0.41.6 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.5...v0.41.6>`_ (2021-02-26)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **repo:** check whether pkg_repo is set (\ `26b2233 <https://github.com/saltstack-formulas/postgres-formula/commit/26b223323fa65abee731af04ee9631062a78b308>`_\ )
+* **repo:** reorder dependencies to prevent errors (\ `750d8aa <https://github.com/saltstack-formulas/postgres-formula/commit/750d8aab7a7e386e5ca0a3d546bb5cf12aa4506c>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gemfile+lock:** use ``ssf`` customised ``kitchen-docker`` repo [skip ci] (\ `476b15e <https://github.com/saltstack-formulas/postgres-formula/commit/476b15e326b72a6bbdb9635d612f30b7a51ce7fa>`_\ )
+* **kitchen+gitlab-ci:** use latest pre-salted images [skip ci] (\ `6f04b31 <https://github.com/saltstack-formulas/postgres-formula/commit/6f04b3191c6d1354d376473ff6e3ba213d614a4d>`_\ )
+* **pre-commit:** update hook for ``rubocop`` [skip ci] (\ `e964c26 <https://github.com/saltstack-formulas/postgres-formula/commit/e964c26a29e61c5455b880e00195d5a0f55de641>`_\ )
+
+Tests
+^^^^^
+
+
+* **command_spec:** fix ``rubocop`` violation [skip ci] (\ `73c39af <https://github.com/saltstack-formulas/postgres-formula/commit/73c39aff5ef9bf5808a251f70504e3b019087f01>`_\ )
+* **pillar:** update conditional to include Tumbleweed (\ `e976ee9 <https://github.com/saltstack-formulas/postgres-formula/commit/e976ee9c9924363db400b23cbde914112b6b4349>`_\ )
+
+`0.41.5 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.4...v0.41.5>`_ (2021-01-07)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **cent7:** postgres11 needs libicu installed (\ `4c0f796 <https://github.com/saltstack-formulas/postgres-formula/commit/4c0f796f00901b88e0ee9d778a5acb2115bf17cb>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **commitlint:** ensure ``upstream/master`` uses main repo URL [skip ci] (\ `e84389d <https://github.com/saltstack-formulas/postgres-formula/commit/e84389dbb31f04f3eeabfd3935ef193e09e5b562>`_\ )
+* **gitlab-ci:** add ``rubocop`` linter (with ``allow_failure``\ ) [skip ci] (\ `2615411 <https://github.com/saltstack-formulas/postgres-formula/commit/2615411ec019600328c330cb4e72de89472f8fc9>`_\ )
+
+`0.41.4 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.3...v0.41.4>`_ (2020-12-16)
+-------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **archlinux:** avoid nonetype error (\ `0a6cf8f <https://github.com/saltstack-formulas/postgres-formula/commit/0a6cf8fefae1bbd5668a447ced911088ac965475>`_\ )
+* **archlinux:** use consistent jinja repo check (\ `3a955e0 <https://github.com/saltstack-formulas/postgres-formula/commit/3a955e02708b23929c93f879bcba0e3fe5ae5666>`_\ )
+* **jinja:** syntax correction (\ `8b44c06 <https://github.com/saltstack-formulas/postgres-formula/commit/8b44c068fcfd4199336596bdba095fc0e6c8fb2e>`_\ )
+* **python:** use python3 postres on cent7/8 (\ `d6d1068 <https://github.com/saltstack-formulas/postgres-formula/commit/d6d1068395131de08534e387d377389bd078d3ee>`_\ )
+* **suse:** version 11+ repo support on suse (\ `b3f381e <https://github.com/saltstack-formulas/postgres-formula/commit/b3f381e54750a00bb19a4aa50c6273c627dca16c>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gitlab-ci:** use GitLab CI as Travis CI replacement (\ `a45673a <https://github.com/saltstack-formulas/postgres-formula/commit/a45673a87892deb973afee3689aea4bebd7a5739>`_\ )
+* **pre-commit:** add to formula [skip ci] (\ `db1794b <https://github.com/saltstack-formulas/postgres-formula/commit/db1794b6bbb6ce183e5231cb4b7e7193dcb80143>`_\ )
+* **pre-commit:** enable/disable ``rstcheck`` as relevant [skip ci] (\ `f04d60a <https://github.com/saltstack-formulas/postgres-formula/commit/f04d60a773461dce98b4f2a7c8abbbab268513a0>`_\ )
+* **pre-commit:** finalise ``rstcheck`` configuration [skip ci] (\ `7036f60 <https://github.com/saltstack-formulas/postgres-formula/commit/7036f60e8ca3857beeca18abe70a3c59b6a021ec>`_\ )
+
 `0.41.3 <https://github.com/saltstack-formulas/postgres-formula/compare/v0.41.2...v0.41.3>`_ (2020-09-29)
 -------------------------------------------------------------------------------------------------------------
 
